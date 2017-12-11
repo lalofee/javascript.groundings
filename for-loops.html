@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>for-loops</title>
+</head>
+<body>
+
+<div id=ausgabe>
+	<span id=ausgabe1></span>
+	<br><br>
+	<span id=ausgabe2></span>
+	<br><br>
+	<span id=ausgabe3></span>
+	<br><br>
+	<span id=ausgabe4></span>
+	<br><br>
+	<span id=ausgabe5></span>
+	<br><br>
+	<span id=ausgabe6></span>
+	<br><br>
+	<span id=ausgabe7></span>
+	<br><br>
+	<span id=ausgabe8></span>
+</div>
+
+
+
+
+
+<script>
+//   basisvorlage for-schleife
+for (
+	let i = 1;
+	i <= 10;
+	i++
+) {
+	console.log(i);
+}
+//------------------------------------------
+
+
+var actors = [
+	'Tom Hanks',
+	'Leonardo DiCaprio',
+	'Jennifer Lawrence',
+	'Daniel Radcliffe'
+	];
+for(let i=0; i<actors.length; i++) {
+	actors[i] = "awesome" + actors[i]
+}
+document.getElementById("ausgabe1").innerHTML=(actors);
+
+//--------------------------------------------------
+//            "Your Nose is like a Stupid Marmot!!!"
+
+function bingo() {
+	
+	var randomBodyParts = ["Face", "Nose", "Hair"];
+	var randomAdjectives = ["Smelly", "Boring", "Stupid"];
+	var randomWords = ["Fly", "Marmot", "Stick", "Monkey", "Rat"];
+
+	var x = Math.floor(Math.random() * 3);
+	var y = Math.floor(Math.random() * 3);
+	var z = Math.floor(Math.random() * 4);
+
+	return "Your " + randomBodyParts[x] + " is like a " + randomAdjectives[y] + " " + randomWords[z];
+}
+	document.getElementById("ausgabe2").innerHTML = bingo();
+
+//-----------------------------------------------------
+
+var n1 = 7;
+var n2 = 21;
+var n3 = 99;
+
+var min_n = Math.min(n1, n2, n3);
+var max_n = Math.max(n1, n2, n3);
+
+console.log(min_n);
+console.log(max_n);
+
+//-------------
+
+var n1 = 21;
+var n2 = 7;
+
+function minNumber() {
+	if(n1 < n2) {
+		return n1
+	} 
+	else {
+		return n2
+	}
+}
+function maxNumber() {
+	if(n1 > n2) {
+		return n1
+	}
+	else {
+		return n2
+	}
+}
+document.getElementById("ausgabe3").innerHTML = minNumber();
+document.getElementById("ausgabe4").innerHTML = maxNumber();
+
+//-------
+
+var numbers = [3, 6, -9, 32];
+var max = 0;
+
+for (var i = 0; i < numbers.length; i++) {
+	if (max < numbers[i]) {
+		max = numbers[i];
+	}
+}
+document.getElementById("ausgabe5").innerHTML = max + " is the maximum number";
+
+//-------------------------------------------------------------------------------
+//          Grounding on Objects
+
+var cat = {
+	legs: 4,
+	name: "Tom",
+	color: "brown",
+};
+console.log("cat has " + cat.legs + " legs");
+console.log("cat has " + cat["legs"]);
+
+//
+
+var dog = {
+	eyes: 2,
+	age: 7,
+	race: "Bullterrier"
+};
+var ausgabe = "Our dog has " + dog.eyes + " eyes and is " + dog.age + " years old and he is a " + dog.race;
+document.getElementById("ausgabe6").innerHTML = ausgabe;
+
+//console.log("Our dog has " + dog.eyes + " eyes and is " + dog.age + " years old and he is a " + dog.race);
+
+//
+
+/*var cat2 = {
+	cat2["legs"] = "3";
+	cat2["name"] = "Reality";
+}
+console.log("The neighbours cat has " + cat2["legs"] + " and her name is " + cat2["name"]);*/
+
+//---------------------------
+
+var dinosaurs = [
+	{ name: "Tyrannosaurus Rex", period: "Late Cretaceous" },
+	{ name: "Stegosaurus", period: "Late Jurassic" },
+	{ name: "Plateosaurus", period: "Triassic" },
+];
+console.log(dinosaurs[0]);   // 0 gibt den ersten Wert aus
+
+console.log(dinosaurs[0]["name"]);    // gibt nur den Namen des ersten Dinosauriers aus
+
+console.log(dinosaurs[1].period);
+
+//------------------------------------------------------------------------------
+
+var Ana = {
+	name: "Ana Doe",
+	age: 25,
+	favouriteMusicians: ["Nirvana", "Dresden Dolls", "Tom Waits"],
+	haircolor: "Purple",
+	favouriteFood: ["Spaghetti", "Brownies"],
+}
+var Dave = {
+	name: "Dave Doodle",
+	age: 37,
+	favouriteMusicians: ["Holzhackerbuam", "Hansi Hinterseer", "Nico"],
+	haircolor: "Green",
+	favouriteFood: ["Schweinsbraten", "Käsenockerl"],
+}
+var Susi = {
+	name: "Susi Sorglos",
+	age: 79,
+	favouriteMusicians: "ACAB",
+	haircolor: "Blue",
+	favouriteFood: ["Karrots", "Water"]
+}
+var friends = [Ana, Dave, Susi];
+console.log(friends);
+
+</script>
+</body>
+</html>
