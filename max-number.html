@@ -1,0 +1,31 @@
+<!-- ermittle die größte Zahl -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>max-number</title>
+</head>
+<body>
+
+<div>
+	<span id=ausgabe1></span>
+	<br>
+	<span id=ausgabe2></span>
+</div>
+
+
+<script>
+
+var numbers = [3, 6, -9, 32];
+var max = 0;
+
+for (var i = 0; i < numbers.length; i++) {
+	if (max < numbers[i]) {
+		max = numbers[i];
+	}
+}
+document.getElementById("ausgabe1").innerHTML = max + " is the maximum number";
+
+</script>
+
+</body>
+</html>
