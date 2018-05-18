@@ -1,0 +1,37 @@
+<!-- erstelle Zufallssätze -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>random</title>
+</head>
+<body>
+
+<div>
+	<span id=ausgabe></span>
+</div>
+
+
+<script>
+
+
+//            "Your Nose is like a Stupid Marmot!!!"
+
+function bingo() {
+	
+	var randomBodyParts = ["Face", "Nose", "Hair"];
+	var randomAdjectives = ["Smelly", "Boring", "Stupid"];
+	var randomWords = ["Fly", "Marmot", "Stick", "Monkey", "Rat"];
+
+	var x = Math.floor(Math.random() * 3);
+	var y = Math.floor(Math.random() * 3);
+	var z = Math.floor(Math.random() * 4);
+
+	return "Your " + randomBodyParts[x] + " is like a " + randomAdjectives[y] + " " + randomWords[z];
+}
+	document.getElementById("ausgabe").innerHTML = bingo();
+
+
+</script>
+
+

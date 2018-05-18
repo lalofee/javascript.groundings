@@ -1,0 +1,32 @@
+<!-- finde die kleinste bzw. die größte Zahl -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>min-max</title>
+</head>
+<body>
+
+<div>
+	<span id=ausgabe1></span>
+	<br>
+	<span id=ausgabe2></span>
+</div>
+
+
+<script>
+
+
+var n1 = 7;
+var n2 = 21;
+var n3 = 99;
+
+var min_n = Math.min(n1, n2, n3);
+var max_n = Math.max(n1, n2, n3);
+
+
+document.getElementById("ausgabe1").innerHTML = "die kleinste Zahl ist: " + min_n;
+document.getElementById("ausgabe2").innerHTML = "die größte Zahl ist: " + max_n;
+</script>
+
+

@@ -1,0 +1,30 @@
+<!-- in front of every actor, add an "awsome" -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>for-loops</title>
+</head>
+<body>
+
+<div>
+	<span id=ausgabe></span>
+</div>
+
+
+<script>
+
+
+var actors = [
+	'Tom Hanks',
+	'Leonardo DiCaprio',
+	'Jennifer Lawrence',
+	'Daniel Radcliffe'
+	];
+for(let i=0; i<actors.length; i++) {
+	actors[i] = "awesome" + actors[i]
+}
+document.getElementById("ausgabe").innerHTML=(actors);
+
+
+</script>
